@@ -27,5 +27,4 @@ class Ebook_Store():
         title_query = self.__filter_query("SELECT * FROM books WHERE book_title = '{}'".format(str(book_title)))
         return title_query.fetchone()
 
-    def add
 
