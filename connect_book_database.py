@@ -35,3 +35,7 @@ class Ebook_Store():
         self.__filter_query("UPDATE books SET {} = '{}' WHERE {} = '{}'".format(value_to_update, new_value, condition_column, condition_value))
         self.connect_db.commit()
 
+    def delete_book_in_table(self, book_to_delete):
+        self.__filter_query("DELETE FROM books WHERE book_title = '{}'".format(book_to_delete))
+        self.connect_db.commit()
+
